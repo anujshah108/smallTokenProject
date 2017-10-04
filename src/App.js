@@ -96,6 +96,7 @@ class App extends Component {
   }
 
   render() {
+    if(this.state.ownerTokens === 0) return (<div> THE TOKEN SALE IS OVER! </div>)
     return (
       <div className="App">
         <nav className="navbar pure-menu pure-menu-horizontal">
