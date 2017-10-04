@@ -50,10 +50,9 @@ View this gif as an example (might take a few seconds to load):
 
 *This will launch on port 3000 - if using a guest please forward port 3000 on guest to a port of choice on your host*  
 
-      ```javascript
-        npm run start
-    ```
-
+ ```javascript
+  npm run start
+ ```
 ----
 
 - `accounts[0]` in TestRPC will automatically be assigned as an owner of the AnujToken contract. 
