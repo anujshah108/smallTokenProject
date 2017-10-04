@@ -2,10 +2,10 @@
 
 - Total Supply Tokens will be 1,000,000 Tokens
 - The buy price will be automatically assigned as 2 Ether per Token on deployment. 
-- If the total supply has been fully distrubuted then the page will render "THE TOKEN SALE IS OVER!"
+- If the total supply has been fully distributed then the page will render "THE TOKEN SALE IS OVER!"
 
 
-*Everytime you switch between MetaMask accounts you will have to reload the page for the app to get linked to your account.*    
+*Every time you switch between MetaMask accounts you will have to reload the page for the app to get linked to your account.*    
 
   
 View this gif as an example (might take a few seconds to load):  
@@ -15,7 +15,7 @@ View this gif as an example (might take a few seconds to load):
 
 ----
 
-*When doing the function call on the frontend - succesful transactions will be alerted with a succesful message and all errors will be alerted with an error message.*  
+*When doing the function call on the frontend - successful transactions will be alerted with a successful message and all errors will be alerted with an error message.*  
 
 ----
 ## Installation
