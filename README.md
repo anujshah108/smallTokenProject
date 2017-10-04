@@ -2,7 +2,7 @@
 
 - Total Supply Tokens will be 1,000,000 Tokens
 - The buy price will be automatically assigned as 2 Ether per Token on deployment. 
-- If the total supply has been fully distrubuted then the page render "THE TOKEN SALE IS OVER!"
+- If the total supply has been fully distrubuted then the page will render "THE TOKEN SALE IS OVER!"
 
 
 *Everytime you switch between MetaMask accounts you will have to reload the page for the app to get linked to your account.*    
