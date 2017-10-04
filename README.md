@@ -10,7 +10,7 @@
 View this gif as an example (might take a few seconds to load):  
 
 
-![Alt Text](./views.gif)
+![Alt Text](./example.gif)
 
 ----
 

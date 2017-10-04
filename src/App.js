@@ -60,7 +60,7 @@ class App extends Component {
           return AnujTokenInstance.totalSupply()
        })
        .then((totalSupply) => {
-          this.setState({ totalSupply: (totalSupply.toNumber()/Math.pow(10,18)).toFixed(18)})
+          this.setState({ totalSupply: (totalSupply.toNumber()/Math.pow(10,18))})
           return AnujTokenInstance.buyPrice()
        })
        .then((buyPrice) => {
@@ -87,7 +87,7 @@ class App extends Component {
     .then(tx =>{
       alert(`You just purchased ${(this.state.purchaseAmount/(this.state.buyPrice*Math.pow(10,18))).toFixed(18)} AnujTokens!`)
       let tokenUser = ((this.state.yourTokens*Math.pow(10,18) + this.state.purchaseAmount/this.state.buyPrice)/Math.pow(10,18)).toFixed(18)
-      let tokensLeft = this.state.ownerTokens - (this.state.purchaseAmount/(this.state.buyPrice*Math.pow(10,18))).toFixed(18)
+      let tokensLeft = ((this.state.ownerTokens*Math.pow(10,18) - this.state.purchaseAmount/this.state.buyPrice)/Math.pow(10,18)).toFixed(18)
       this.setState({yourTokens:tokenUser, ownerTokens:tokensLeft, purchaseAmount:0})
     })
     .catch(error => {
@@ -113,7 +113,7 @@ class App extends Component {
               <h3>Amount of Your Current AnujTokens: {this.state.yourTokens} </h3>
               <hr/>
               <h2>Purchase Some Tokens Here! </h2>
-              <p>You must enter at least {this.state.buyPrice} Wei. With the current amount entered you will receive {(this.state.purchaseAmount/(this.state.buyPrice*Math.pow(10,18))).toFixed(18)} AnujTokens! </p>
+              <h3>You must enter at least {this.state.buyPrice} Wei. With the current amount entered you will receive {(this.state.purchaseAmount/(this.state.buyPrice*Math.pow(10,18))).toFixed(18)} AnujTokens! </h3>
               <form onSubmit={this.purchaseToken}>            
               <h4> Enter Amount of Wei Here: </h4>
               <input value={this.state.purchaseAmount} onChange={e => this.setState({purchaseAmount: e.target.value })}/>
