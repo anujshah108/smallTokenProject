@@ -1,8 +1,8 @@
 pragma solidity ^0.4.11;
 
-contract tokenRecipient { function receiveApproval(address _from, uint256 _value, address _token, bytes _extraData) public; }
+import './tokenRecipientI.sol';
 
-contract TokenERC {
+contract TokenERC20 {
     string public name;
     string public symbol;
     uint8 public decimals = 18;
@@ -17,7 +17,7 @@ contract TokenERC {
     event Burn(address indexed from, uint256 value);
 
     
-    function TokenERC(
+    function TokenERC20(
         uint256 initialSupply,
         string tokenName,
         string tokenSymbol
@@ -68,7 +68,7 @@ contract TokenERC {
     function approveAndCall(address _spender, uint256 _value, bytes _extraData)
         public
         returns (bool success) {
-        tokenRecipient spender = tokenRecipient(_spender);
+        tokenRecipientI spender = tokenRecipientI(_spender);
         if (approve(_spender, _value)) {
             spender.receiveApproval(msg.sender, _value, this, _extraData);
             return true;

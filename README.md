@@ -49,9 +49,9 @@ View this gif as an example (might take a few seconds to load):
 
 *This will launch on port 3000 - if using a guest please forward port 3000 on guest to a port of choice on your host*  
 
-  ```javascript
-    npm run start
-```
+      ```javascript
+        npm run start
+    ```
 
 ----
 
@@ -61,7 +61,7 @@ View this gif as an example (might take a few seconds to load):
 - The initial supply of all tokens is assigned to the owner of the contract. 
     
 
-- Adding accounts to MetaMask using testrpc will allow you to purchase AnujToken. 
+- Adding accounts to MetaMask private network and TestRPC will allow you to purchase AnujToken. 
 
 
 ____

@@ -1,9 +1,9 @@
 pragma solidity ^0.4.11;
 
 import "./Owned.sol";
-import "./TokenERC.sol";
+import "./TokenERC20.sol";
 
-contract AnujToken is Owned, TokenERC {
+contract AnujToken is Owned, TokenERC20 {
 
     uint256 public sellPrice;
     uint256 public buyPrice;
@@ -20,7 +20,7 @@ contract AnujToken is Owned, TokenERC {
         string tokenSymbol,
         uint _sellPrice,
         uint _buyPrice
-    ) TokenERC(initialSupply, tokenName, tokenSymbol) public {
+    ) TokenERC20(initialSupply, tokenName, tokenSymbol) public {
         sellPrice = _sellPrice;
         buyPrice = _buyPrice;
     }
